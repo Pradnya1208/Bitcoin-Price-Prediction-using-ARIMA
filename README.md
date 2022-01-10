@@ -24,10 +24,10 @@ Time Series is a series of observations taken at specified time intervals usuall
 
 ### Components of Time Series:
 There are 4 components:<br>
-- Trend - Upward & downward movement of the data with time over a large period of time. Eq: Appreciation of Dollar vs rupee.
-- Seasonality - seasonal variances. Eq: Icecream sales increases in Summer only
-- Noise or Irregularity - Spikes & troughs at random intervals
-- Cyclicity - behavior that repeats itself after large interval of time, like months, years etc.
+- **Trend** - Upward & downward movement of the data with time over a large period of time. Eq: Appreciation of Dollar vs rupee.
+- **Seasonality** - seasonal variances. Eq: Icecream sales increases in Summer only
+- **Noise or Irregularity** - Spikes & troughs at random intervals
+- **Cyclicity** - behavior that repeats itself after large interval of time, like months, years etc.
 
 ### ARIMA Model:
 ARIMA(Auto Regressive Integrated Moving Average) is a combination of 2 models AR(Auto Regressive) & MA(Moving Average). It has 3 hyperparameters - P(auto regressive lags),d(order of differentiation),Q(moving avg.) which respectively comes from the AR, I & MA components. The AR part is correlation between prev & current time periods. To smooth out the noise, the MA part is used. The I part binds together the AR & MA parts.
@@ -58,8 +58,8 @@ Before applying any statistical model on a Time Series, the series has to be sta
 Trend & Seasonality are two reasons why a Time Series is not stationaru & hence need to be corrected.
 <br>
 There are 2 ways to check for Stationarity of a TS:<br>
-- Rolling Statistics - Plot the moving avg or moving standard deviation to see if it varies with time. Its a visual technique.
-- ADCF Test - Augmented Dickey–Fuller test is used to gives us various values that can help in identifying stationarity. The Null hypothesis says that a TS is non-stationary. It comprises of a Test Statistics & some critical values for some confidence levels. If the Test statistics is less than the critical values, we can reject the null hypothesis & say that the series is stationary. THE ADCF test also gives us a p-value. Acc to the null hypothesis, lower values of p is better.
+- **Rolling Statistics** - Plot the moving avg or moving standard deviation to see if it varies with time. Its a visual technique.
+- **ADCF Test** - Augmented Dickey–Fuller test is used to gives us various values that can help in identifying stationarity. The Null hypothesis says that a TS is non-stationary. It comprises of a Test Statistics & some critical values for some confidence levels. If the Test statistics is less than the critical values, we can reject the null hypothesis & say that the series is stationary. THE ADCF test also gives us a p-value. Acc to the null hypothesis, lower values of p is better.
 
 #### Stationarity check and seasonal decomposition:
 We will try to decompose seasonal component of the time series.
